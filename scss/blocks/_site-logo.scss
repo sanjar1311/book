@@ -1,4 +1,6 @@
 .site-logo {
+  position: relative;
+  z-index: 9999;
 
   &:hover {
     opacity: 0.8;
@@ -12,3 +14,24 @@
 .site-logo__img {
   display: block;
 }
+
+.site-logo__logo-wrapper {
+  fill: #242A45;
+}
+
+.site-logo__logo-desktop {
+  display: block;
+}
+
+.site-logo__logo-mibile {
+  display: none;
+}
+
+
+.site-header--open .site-logo__logo-desktop{
+  display: none;
+  }
+
+.site-header--open .site-logo__logo-mibile {
+    display: block;
+  }

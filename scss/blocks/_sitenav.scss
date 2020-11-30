@@ -50,6 +50,94 @@
   display: none;
 }
 
-.sitenav__btn--open {
+@media only screen and (max-width: 768px) {
 
+  .sitenav__btn {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 25px;
+    height: 20px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25px 20px;
+    position: relative;
+    z-index: 999;
+    padding: 15px;
+  }
+
+  .sitenav__btn--open {
+    background-image: url("../img/hamburger-icon.svg");
+  }
+
+  .sitenav__btn--close {
+    background-image: url("../img/site-toggler-close.svg");
+  }
+
+  .sitenav__list {
+    display: none;
+  }
+
+ .site-header--open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 555;
+  }
+
+ .site-header--open .sitenav__list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #242A45;
+    mix-blend-mode: normal;
+    opacity: 0.95;
+    backdrop-filter: blur(32.6194px);
+    align-items: center;
+    padding: 121px 20px 0 20px;
+    animation: toggler-anime .4s ease forwards;
+  }
+
+ .site-header--open .sitenav__item {
+    margin-right: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+ .site-header--open .sitenav__link {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 2.30769px;
+    text-transform: uppercase;
+    padding: 25px 0 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+ .site-header--open .sitenav__link--login {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+  }
+}
+
+@keyframes toggler-anime {
+  from{
+    transform: translateX(100%);
+  }
+
+  to{
+    transform: translateX(0);
+  }
 }
